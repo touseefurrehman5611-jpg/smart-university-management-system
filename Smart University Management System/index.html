@@ -1,0 +1,971 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Smart University Management System</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="page-shell">
+    <!-- Top navigation bar with site brand and dark mode toggle -->
+    <header class="topbar">
+      <div class="brand">
+        <span class="brand-logo">SU</span>
+        <div>
+          <h1>Smart University</h1>
+          <p>Management System for Students, Teachers, and Admin</p>
+        </div>
+      </div>
+      <button id="mobileNavToggle" class="nav-toggle btn btn-ghost" aria-label="Toggle navigation menu">Menu</button>
+      <nav class="main-nav">
+        <a href="#auth">Login</a>
+        <a href="#features">Features</a>
+        <a href="#dashboard">Dashboard</a>
+        <a href="#courses">Courses</a>
+        <a href="#attendance">Attendance</a>
+        <a href="#notice">Notice</a>
+      </nav>
+      <div class="top-actions">
+        <button id="themeToggle" class="btn btn-ghost" aria-label="Toggle dark mode">Dark Mode</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" id="home">
+        <div class="hero-copy">
+          <span class="eyebrow">Smart University</span>
+          <h2>One Platform for Student, Teacher & Admin Success</h2>
+          <p>Manage courses, attendance, assignments, marks, notices, chat, and analytics from a modern responsive dashboard.</p>
+          <div class="hero-actions">
+            <a href="#auth" class="btn btn-primary">Get Started</a>
+            <a href="#analytics" class="btn btn-secondary">View Analytics</a>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <img src="assets/hero.svg" alt="University dashboard illustration" />
+        </div>
+      </section>
+
+      <section class="features grid-3">
+        <article class="feature-card">
+          <img src="assets/student.svg" alt="Student illustration" />
+          <h3>Student Portal</h3>
+          <p>View courses, submit assignments, check attendance, download PDF results, and chat instantly.</p>
+        </article>
+        <article class="feature-card">
+          <img src="assets/teacher.svg" alt="Teacher illustration" />
+          <h3>Teacher Portal</h3>
+          <p>Manage classes, upload assignments, record attendance, grade papers, and share notices.</p>
+        </article>
+        <article class="feature-card">
+          <img src="assets/admin.svg" alt="Admin illustration" />
+          <h3>Admin Console</h3>
+          <p>Control users, courses, analytics, notices, and system-wide announcements from one secure place.</p>
+        </article>
+      </section>
+
+      <section class="panel" id="features">
+        <div class="panel-header">
+          <h2>Full University Workflow</h2>
+          <p>This platform brings together authentication, student services, teaching tools, admin controls, and smart-campus features in one responsive experience.</p>
+        </div>
+
+        <div class="feature-collections">
+          <article class="feature-stack">
+            <h3>🔐 Authentication</h3>
+            <ul class="feature-list">
+              <li>Student Login</li>
+              <li>Teacher Login</li>
+              <li>Admin Login</li>
+              <li>Registration</li>
+              <li>Forgot Password</li>
+              <li>Email Verification</li>
+              <li>Role-Based Access Control</li>
+            </ul>
+          </article>
+
+          <article class="feature-stack">
+            <h3>👤 Student Features</h3>
+            <ul class="feature-list">
+              <li>Student Dashboard</li>
+              <li>Profile Management</li>
+              <li>Course Registration</li>
+              <li>View Timetable</li>
+              <li>Attendance Record</li>
+              <li>Assignment Submission</li>
+              <li>Quiz Attempt</li>
+              <li>View Results</li>
+              <li>GPA/CGPA Calculator</li>
+              <li>Fee Status</li>
+              <li>Download Transcript (PDF)</li>
+              <li>Download Student ID Card</li>
+              <li>View Academic Calendar</li>
+            </ul>
+          </article>
+
+          <article class="feature-stack">
+            <h3>👨‍🏫 Teacher Features</h3>
+            <ul class="feature-list">
+              <li>Teacher Dashboard</li>
+              <li>Manage Courses</li>
+              <li>Mark Attendance</li>
+              <li>Upload Assignments</li>
+              <li>Create Quizzes</li>
+              <li>Enter Student Marks</li>
+              <li>Upload Study Materials</li>
+              <li>Class Announcements</li>
+              <li>Student Performance Report</li>
+              <li>Schedule Online/Offline Classes</li>
+            </ul>
+          </article>
+
+          <article class="feature-stack">
+            <h3>👨‍💼 Admin Features</h3>
+            <ul class="feature-list">
+              <li>Admin Dashboard</li>
+              <li>Manage Students</li>
+              <li>Manage Teachers</li>
+              <li>Manage Departments</li>
+              <li>Manage Courses</li>
+              <li>Semester Management</li>
+              <li>Fee Management</li>
+              <li>Scholarship Management</li>
+              <li>Generate Reports</li>
+              <li>Backup & Restore Database</li>
+            </ul>
+          </article>
+
+          <article class="feature-stack">
+            <h3>📚 Academic Operations</h3>
+            <ul class="feature-list">
+              <li>Course Prerequisites</li>
+              <li>Credit Hour Management</li>
+              <li>Semester-wise GPA</li>
+              <li>Batch Management</li>
+              <li>Section Management</li>
+              <li>Class Scheduling</li>
+              <li>Exam Scheduling</li>
+              <li>Hall Allocation</li>
+              <li>Admit Card Generation</li>
+              <li>Degree Progress Tracker</li>
+            </ul>
+          </article>
+
+          <article class="feature-stack">
+            <h3>👨‍🎓 Student Services</h3>
+            <ul class="feature-list">
+              <li>Hostel Management</li>
+              <li>Transport Management</li>
+              <li>Library Management</li>
+              <li>Book Issue/Return</li>
+              <li>Lost & Found</li>
+              <li>Student Complaints</li>
+              <li>Leave Application</li>
+              <li>Medical Record</li>
+              <li>Emergency Contacts</li>
+              <li>Student Achievements</li>
+            </ul>
+          </article>
+
+          <article class="feature-stack">
+            <h3>👨‍🏫 Teacher Features</h3>
+            <ul class="feature-list">
+              <li>Teacher Attendance</li>
+              <li>Leave Requests</li>
+              <li>Workload Management</li>
+              <li>Office Hours</li>
+              <li>Meeting Scheduler</li>
+              <li>Research Publication Record</li>
+              <li>Faculty Profile</li>
+              <li>Course Feedback</li>
+              <li>Assignment Deadline Management</li>
+              <li>Attendance Reports</li>
+            </ul>
+          </article>
+
+          <article class="feature-stack">
+            <h3>💰 Finance</h3>
+            <ul class="feature-list">
+              <li>Online Fee Payment</li>
+              <li>Payment Receipts</li>
+              <li>Payment History</li>
+              <li>Fine Management</li>
+              <li>Refund Requests</li>
+              <li>Discount Management</li>
+              <li>Installment Plans</li>
+              <li>Financial Reports</li>
+              <li>Expense Tracking</li>
+              <li>Revenue Dashboard</li>
+            </ul>
+          </article>
+
+          <article class="feature-stack">
+            <h3>📢 Communication</h3>
+            <ul class="feature-list">
+              <li>University News</li>
+              <li>Event Management</li>
+              <li>Club/Society Management</li>
+              <li>Discussion Forum</li>
+              <li>Polls & Surveys</li>
+              <li>Private Messaging</li>
+              <li>Group Chat</li>
+              <li>Announcement Scheduler</li>
+              <li>Email Broadcast</li>
+              <li>SMS Notifications</li>
+            </ul>
+          </article>
+
+          <article class="feature-stack">
+            <h3>📊 Analytics</h3>
+            <ul class="feature-list">
+              <li>Student Performance Charts</li>
+              <li>Attendance Analytics</li>
+              <li>Pass/Fail Analysis</li>
+              <li>Course Popularity</li>
+              <li>Teacher Performance Dashboard</li>
+              <li>Enrollment Statistics</li>
+              <li>Graduation Statistics</li>
+              <li>Monthly Reports</li>
+              <li>Export to Excel</li>
+              <li>Export to PDF</li>
+            </ul>
+          </article>
+
+          <article class="feature-stack">
+            <h3>🔒 Security</h3>
+            <ul class="feature-list">
+              <li>Login History</li>
+              <li>Device Management</li>
+              <li>Session Management</li>
+              <li>Account Lock After Failed Attempts</li>
+              <li>Password Strength Checker</li>
+              <li>Audit Logs</li>
+              <li>IP Address Logging</li>
+              <li>CAPTCHA Protection</li>
+              <li>Two-Factor Authentication (2FA)</li>
+              <li>Data Encryption</li>
+            </ul>
+          </article>
+
+          <article class="feature-stack">
+            <h3>🤖 AI Features</h3>
+            <ul class="feature-list">
+              <li>AI Study Planner</li>
+              <li>AI Course Recommendation</li>
+              <li>AI Assignment Helper</li>
+              <li>AI Notes Summarizer</li>
+              <li>AI Question Generator</li>
+              <li>AI Quiz Generator</li>
+              <li>AI Chat Assistant</li>
+              <li>AI Attendance Insights</li>
+              <li>AI Performance Prediction</li>
+              <li>AI Career Guidance</li>
+            </ul>
+          </article>
+
+          <article class="feature-stack">
+            <h3>🌐 Modern Features</h3>
+            <ul class="feature-list">
+              <li>Dark/Light Theme</li>
+              <li>Multi-language Support</li>
+              <li>Progressive Web App (PWA)</li>
+              <li>Offline Mode</li>
+              <li>Push Notifications</li>
+              <li>QR Code Student ID</li>
+              <li>Barcode Library Cards</li>
+              <li>Calendar Integration</li>
+              <li>Google Maps Campus Navigation</li>
+              <li>Voice Search</li>
+            </ul>
+          </article>
+
+          <article class="feature-stack">
+            <h3>⚙️ Developer Features</h3>
+            <ul class="feature-list">
+              <li>REST API</li>
+              <li>API Documentation (Swagger)</li>
+              <li>Docker Support</li>
+              <li>GitHub Actions (CI/CD)</li>
+              <li>Unit Testing</li>
+              <li>Error Logging</li>
+              <li>Environment Configuration</li>
+              <li>Database Seeder</li>
+              <li>Automated Backup</li>
+              <li>System Health Monitoring</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="student-tools">
+          <article class="student-tool-card">
+            <h3>Student Snapshot</h3>
+            <ul class="feature-list compact-list">
+              <li>Profile updated 2 hours ago</li>
+              <li>4 courses registered</li>
+              <li>Upcoming quiz: Friday 10:00</li>
+            </ul>
+          </article>
+
+          <article class="student-tool-card">
+            <h3>GPA Calculator</h3>
+            <form id="gpaForm" class="mini-form">
+              <label>Programming</label>
+              <input id="gpaProgramming" type="number" min="0" max="100" value="88" />
+              <label>Mathematics</label>
+              <input id="gpaMath" type="number" min="0" max="100" value="84" />
+              <label>English</label>
+              <input id="gpaEnglish" type="number" min="0" max="100" value="91" />
+              <button type="submit" class="btn btn-primary">Calculate GPA</button>
+              <p id="gpaResult" class="small-text">Estimated GPA will appear here.</p>
+            </form>
+          </article>
+
+          <article class="student-tool-card">
+            <h3>Feedback System</h3>
+            <form id="feedbackForm" class="mini-form">
+              <label>Subject</label>
+              <input id="feedbackSubject" type="text" placeholder="Campus experience" required />
+              <label>Message</label>
+              <textarea id="feedbackMessageText" placeholder="Share your suggestion or concern" required></textarea>
+              <button type="submit" class="btn btn-secondary">Send Feedback</button>
+              <p id="feedbackStatus" class="small-text">We value your suggestions.</p>
+            </form>
+          </article>
+        </div>
+      </section>
+
+      <section class="panel" id="auth">
+        <div class="panel-header">
+          <h2>Secure Access</h2>
+          <p>Sign up for a student, teacher, or admin account, then log in to your portal.</p>
+        </div>
+        <div class="auth-tabs">
+          <button type="button" class="tab-btn active" data-target="loginTab">Login</button>
+          <button type="button" class="tab-btn" data-target="signupTab">Sign Up</button>
+        </div>
+        <div id="loginTab" class="tab-panel">
+          <div class="login-grid">
+            <div class="login-card">
+              <h3>Student Login</h3>
+              <form data-role="student" class="role-login-form">
+                <label>Student Email</label>
+                <input type="email" value="student@university.edu" required />
+                <label>Password</label>
+                <input type="password" value="student123" required />
+                <button type="submit" class="btn btn-primary">Student Sign In</button>
+              </form>
+              <p class="login-hint">Use <strong>student@university.edu</strong> / <strong>student123</strong></p>
+            </div>
+            <div class="login-card">
+              <h3>Teacher Login</h3>
+              <form data-role="teacher" class="role-login-form">
+                <label>Teacher Email</label>
+                <input type="email" value="teacher@university.edu" required />
+                <label>Password</label>
+                <input type="password" value="teacher123" required />
+                <button type="submit" class="btn btn-primary">Teacher Sign In</button>
+              </form>
+              <p class="login-hint">Use <strong>teacher@university.edu</strong> / <strong>teacher123</strong></p>
+            </div>
+            <div class="login-card">
+              <h3>Admin Login</h3>
+              <form data-role="admin" class="role-login-form">
+                <label>Admin Email</label>
+                <input type="email" value="admin@university.edu" required />
+                <label>Password</label>
+                <input type="password" value="admin123" required />
+                <button type="submit" class="btn btn-primary">Admin Sign In</button>
+              </form>
+              <p class="login-hint">Use <strong>admin@university.edu</strong> / <strong>admin123</strong></p>
+            </div>
+          </div>
+          <p class="login-hint auth-note"><a href="#" id="forgotPasswordLink">Forgot password?</a></p>
+        </div>
+        <div id="resetPanel" class="tab-panel hidden">
+          <div class="signup-grid">
+            <div class="signup-card">
+              <h3>Reset Password</h3>
+              <form id="resetForm">
+                <label>Email</label>
+                <input id="resetEmail" type="email" placeholder="Enter your account email" required />
+                <label>Role</label>
+                <select id="resetRole" required>
+                  <option value="student">Student</option>
+                  <option value="teacher">Teacher</option>
+                  <option value="admin">Admin</option>
+                </select>
+                <button type="submit" class="btn btn-primary">Reset Password</button>
+              </form>
+              <p id="resetMessage" class="login-hint">Enter your email and role to recover your account.</p>
+            </div>
+          </div>
+        </div>
+        <div id="signupTab" class="tab-panel hidden">
+          <div class="signup-grid">
+            <div class="signup-card">
+              <h3>Create Account</h3>
+              <form id="signupForm">
+                <label>Full Name</label>
+                <input id="signupName" type="text" placeholder="Your name" required />
+                <label>Select Role</label>
+                <select id="signupRole" required>
+                  <option value="student">Student</option>
+                  <option value="teacher">Teacher</option>
+                  <option value="admin">Admin</option>
+                </select>
+                <label>Email</label>
+                <input id="signupEmail" type="email" placeholder="you@example.com" required />
+                <label>Password</label>
+                <input id="signupPassword" type="password" placeholder="Create a password" required />
+                <button type="submit" class="btn btn-primary">Sign Up</button>
+              </form>
+              <p id="signupMessage" class="login-hint">After signup, use the login tab to sign in.</p>              <button id="verifyEmailBtn" class="btn btn-secondary hidden">Verify Email</button>
+              <p id="verificationStatus" class="login-hint hidden"></p>            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel hidden" id="userPanel">
+        <div class="panel-header user-panel-header">
+          <div>
+            <span id="currentRoleBadge" class="role-badge">Role</span>
+            <h2 id="userGreeting">Welcome to Smart University</h2>
+            <p id="userRoleDescription">Your personalized dashboard is ready.</p>
+          </div>
+          <button id="logoutBtn" class="btn btn-ghost">Logout</button>
+        </div>
+        <div class="dashboard-summary-grid">
+          <article class="dash-card">
+            <p class="dash-label">Active Role</p>
+            <h3 id="dashboardRoleName">Student</h3>
+          </article>
+          <article class="dash-card">
+            <p class="dash-label">Access</p>
+            <h3 id="dashboardAccessLevel">Courses, Attendance, Assignments</h3>
+          </article>
+        </div>
+      </section>
+
+      <section class="panel hidden" id="dashboard" data-visible-roles="student,teacher,admin">
+        <div class="panel-header">
+          <h2>Unified Dashboard</h2>
+          <p>A live overview for student performance, teaching activities, and admin controls.</p>
+        </div>
+        <div class="dashboard-grid">
+          <article class="dash-card">
+            <p class="dash-label">Students Enrolled</p>
+            <h3>4,280</h3>
+          </article>
+          <article class="dash-card">
+            <p class="dash-label">Courses Active</p>
+            <h3>120</h3>
+          </article>
+          <article class="dash-card">
+            <p class="dash-label">Attendance Rate</p>
+            <h3>92%</h3>
+          </article>
+          <article class="dash-card">
+            <p class="dash-label">Assignments Due</p>
+            <h3>18</h3>
+          </article>
+        </div>
+
+        <div class="role-panel hidden" id="studentPortal">
+          <div class="panel-header">
+            <h3>Student Portal</h3>
+            <p>View your courses, attendance summary, assignment status, and downloadable results.</p>
+          </div>
+          <div class="dashboard-grid">
+            <article class="dash-card">
+              <p class="dash-label">Your Attendance</p>
+              <h3 id="studentAttendancePercent">94.7%</h3>
+            </article>
+            <article class="dash-card">
+              <p class="dash-label">Assignments Submitted</p>
+              <h3 id="studentSubmissionCount">6 / 7</h3>
+            </article>
+            <article class="dash-card">
+              <p class="dash-label">Current CGPA</p>
+              <h3 id="studentCgpa">3.78</h3>
+            </article>
+          </div>
+
+          <div class="portal-section">
+            <h4>Profile Management</h4>
+            <form id="studentProfileForm" class="grid-form">
+              <input id="studentNameInput" type="text" placeholder="Full name" />
+              <input id="studentIdInput" type="text" placeholder="Student ID" />
+              <input id="studentMajorInput" type="text" placeholder="Program" />
+              <input id="studentPhoneInput" type="text" placeholder="Phone" />
+              <input id="studentAddressInput" type="text" placeholder="Address" />
+              <button type="submit" class="btn btn-primary">Save Profile</button>
+            </form>
+            <div id="studentProfileSummary" class="info-list"></div>
+          </div>
+
+          <div class="portal-section">
+            <h4>Course Registration</h4>
+            <div id="registeredCoursesList" class="chip-list"></div>
+          </div>
+
+          <div class="portal-section">
+            <h4>Timetable</h4>
+            <div id="studentTimetable" class="info-list"></div>
+          </div>
+
+          <div class="portal-section">
+            <h4>Attendance Record</h4>
+            <div id="attendanceRecordList" class="info-list"></div>
+          </div>
+
+          <div class="portal-section">
+            <h4>Quiz Attempt</h4>
+            <form id="studentQuizForm" class="grid-form">
+              <input id="quizTopicInput" type="text" placeholder="Quiz topic" />
+              <input id="quizScoreInput" type="number" min="0" max="100" placeholder="Score" />
+              <button type="submit" class="btn btn-secondary">Submit Quiz</button>
+            </form>
+            <div id="studentQuizResults" class="info-list"></div>
+          </div>
+
+          <div class="portal-section">
+            <h4>Fee Status</h4>
+            <div id="studentFeeStatus" class="info-list"></div>
+          </div>
+
+          <div class="portal-section">
+            <h4>Documents</h4>
+            <div class="action-row">
+              <button id="downloadTranscriptBtn" class="btn btn-primary">Download Transcript (PDF)</button>
+              <button id="downloadIdCardBtn" class="btn btn-secondary">Download Student ID Card</button>
+            </div>
+          </div>
+
+          <div class="portal-section">
+            <h4>Academic Calendar</h4>
+            <div id="academicCalendarList" class="info-list"></div>
+          </div>
+        </div>
+
+        <div class="role-panel hidden" id="teacherPortal">
+          <div class="panel-header">
+            <h3>Teacher Portal</h3>
+            <p>Mark attendance and manage student grades from one place.</p>
+          </div>
+
+          <div class="portal-section">
+            <h4>Manage Courses</h4>
+            <form id="teacherCourseForm" class="grid-form">
+              <input id="teacherCourseName" type="text" placeholder="Course name" />
+              <input id="teacherCourseSection" type="text" placeholder="Section" />
+              <button type="submit" class="btn btn-primary">Add Course</button>
+            </form>
+            <div id="teacherCourseList" class="info-list"></div>
+          </div>
+
+          <div class="portal-section">
+            <h4>Attendance Sheet</h4>
+            <div class="table-wrap">
+              <table id="attendanceTable" class="data-table">
+                <thead>
+                  <tr>
+                    <th>Student</th>
+                    <th>Course</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Aisha</td>
+                    <td>Web Design</td>
+                    <td class="attendance-status">Present</td>
+                    <td><button class="btn btn-secondary toggle-attendance">Toggle</button></td>
+                  </tr>
+                  <tr>
+                    <td>Bilal</td>
+                    <td>Data Science</td>
+                    <td class="attendance-status">Absent</td>
+                    <td><button class="btn btn-secondary toggle-attendance">Toggle</button></td>
+                  </tr>
+                  <tr>
+                    <td>Fatima</td>
+                    <td>Cloud Computing</td>
+                    <td class="attendance-status">Present</td>
+                    <td><button class="btn btn-secondary toggle-attendance">Toggle</button></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="portal-section">
+            <h4>Upload Assignments</h4>
+            <input id="teacherUpload" type="file" accept=".pdf,.docx" />
+            <button id="uploadAssignmentBtn" class="btn btn-secondary">Upload File</button>
+            <p id="uploadStatus" class="small-text">No file selected.</p>
+          </div>
+
+          <div class="portal-section">
+            <h4>Create Quiz</h4>
+            <form id="teacherQuizForm" class="grid-form">
+              <input id="quizTitleInput" type="text" placeholder="Quiz title" />
+              <input id="quizDateInput" type="date" />
+              <button type="submit" class="btn btn-secondary">Publish Quiz</button>
+            </form>
+            <div id="teacherQuizList" class="info-list"></div>
+          </div>
+
+          <div class="portal-section">
+            <h4>Marks Management</h4>
+            <div class="table-wrap">
+              <table id="marksTable" class="data-table">
+                <thead>
+                  <tr>
+                    <th>Student</th>
+                    <th>Course</th>
+                    <th>Marks</th>
+                    <th>Grade</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Aisha</td>
+                    <td>Web Design</td>
+                    <td><input class="grade-input" type="number" min="0" max="100" value="88" /></td>
+                    <td class="grade-output">A</td>
+                  </tr>
+                  <tr>
+                    <td>Bilal</td>
+                    <td>Data Science</td>
+                    <td><input class="grade-input" type="number" min="0" max="100" value="74" /></td>
+                    <td class="grade-output">B</td>
+                  </tr>
+                  <tr>
+                    <td>Fatima</td>
+                    <td>Cloud Computing</td>
+                    <td><input class="grade-input" type="number" min="0" max="100" value="91" /></td>
+                    <td class="grade-output">A+</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <button id="updateMarksBtn" class="btn btn-primary">Update Grades</button>
+          </div>
+
+          <div class="portal-section">
+            <h4>Study Materials</h4>
+            <form id="studyMaterialForm" class="grid-form">
+              <input id="studyMaterialTitle" type="text" placeholder="Material title" />
+              <button type="submit" class="btn btn-secondary">Upload Material</button>
+            </form>
+            <div id="studyMaterialList" class="info-list"></div>
+          </div>
+
+          <div class="portal-section">
+            <h4>Announcements</h4>
+            <form id="announcementForm" class="grid-form">
+              <input id="announcementText" type="text" placeholder="Class announcement" />
+              <button type="submit" class="btn btn-secondary">Publish</button>
+            </form>
+            <div id="announcementList" class="info-list"></div>
+          </div>
+
+          <div class="portal-section">
+            <h4>Performance Report</h4>
+            <div id="teacherReport" class="info-list"></div>
+          </div>
+
+          <div class="portal-section">
+            <h4>Schedule Classes</h4>
+            <form id="classScheduleForm" class="grid-form">
+              <input id="classScheduleTitle" type="text" placeholder="Course / Class" />
+              <input id="classScheduleTime" type="text" placeholder="Time" />
+              <button type="submit" class="btn btn-secondary">Save Schedule</button>
+            </form>
+            <div id="classScheduleList" class="info-list"></div>
+          </div>
+        </div>
+
+        <div class="role-panel hidden" id="adminPortal">
+          <div class="panel-header">
+            <h3>Admin Portal</h3>
+            <p>Use backup access to view both student and teacher portals, manage notices, and support the system.</p>
+          </div>
+          <div class="admin-switch">
+            <button class="btn btn-secondary" data-admin-action="showStudent">Student View</button>
+            <button class="btn btn-secondary" data-admin-action="showTeacher">Teacher View</button>
+          </div>
+
+          <div class="portal-section">
+            <h4>Manage Students</h4>
+            <form id="adminStudentForm" class="grid-form">
+              <input id="adminStudentName" type="text" placeholder="Student name" />
+              <input id="adminStudentEmail" type="email" placeholder="Email" />
+              <button type="submit" class="btn btn-primary">Add Student</button>
+            </form>
+            <div id="adminStudentList" class="info-list"></div>
+          </div>
+
+          <div class="portal-section">
+            <h4>Manage Teachers</h4>
+            <form id="adminTeacherForm" class="grid-form">
+              <input id="adminTeacherName" type="text" placeholder="Teacher name" />
+              <input id="adminTeacherEmail" type="email" placeholder="Email" />
+              <button type="submit" class="btn btn-primary">Add Teacher</button>
+            </form>
+            <div id="adminTeacherList" class="info-list"></div>
+          </div>
+
+          <div class="portal-section">
+            <h4>Manage Departments</h4>
+            <form id="adminDepartmentForm" class="grid-form">
+              <input id="adminDepartmentName" type="text" placeholder="Department name" />
+              <button type="submit" class="btn btn-secondary">Add Department</button>
+            </form>
+            <div id="adminDepartmentList" class="info-list"></div>
+          </div>
+
+          <div class="portal-section">
+            <h4>Semester Management</h4>
+            <form id="adminSemesterForm" class="grid-form">
+              <input id="adminSemesterName" type="text" placeholder="Semester" />
+              <button type="submit" class="btn btn-secondary">Add Semester</button>
+            </form>
+            <div id="adminSemesterList" class="info-list"></div>
+          </div>
+
+          <div class="portal-section">
+            <h4>Fee & Scholarship</h4>
+            <form id="adminFinanceForm" class="grid-form">
+              <input id="adminFinanceTitle" type="text" placeholder="Fee / Scholarship title" />
+              <input id="adminFinanceAmount" type="number" placeholder="Amount" />
+              <button type="submit" class="btn btn-secondary">Add Record</button>
+            </form>
+            <div id="adminFinanceList" class="info-list"></div>
+          </div>
+
+          <div class="portal-section">
+            <h4>Backup & Restore</h4>
+            <p class="small-text">Export or import site data (users & courses) for backup.</p>
+            <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:12px;">
+              <button id="exportBackupBtn" class="btn btn-primary">Export Backup</button>
+              <input id="importBackupFile" type="file" accept="application/json" />
+            </div>
+            <p id="backupMessage" class="small-text"></p>
+          </div>
+          <p class="small-text">Admin can access both student and teacher portals. Use these buttons to switch views quickly.</p>
+        </div>
+      </section>
+
+      <section class="panel" id="analytics">
+        <div class="panel-header">
+          <h2>Analytics Snapshot</h2>
+          <p>Track engagement, attendance, assignment completion, and course popularity.</p>
+        </div>
+        <div class="analytics-grid">
+          <div class="chart-card">
+            <h3>Attendance Trend</h3>
+            <div class="chart chart-line"></div>
+          </div>
+          <div class="chart-card">
+            <h3>Top Courses</h3>
+            <ul>
+              <li>Computer Science Fundamentals</li>
+              <li>Business Analytics</li>
+              <li>AI & Machine Learning</li>
+              <li>Design Thinking</li>
+            </ul>
+          </div>
+          <div class="chart-card wide-card">
+            <h3>Monthly Performance</h3>
+            <div class="chart chart-bars"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel" id="courses">
+        <div class="panel-header">
+          <h2>Course Management</h2>
+          <p>Search, filter, add new courses, and assign instructors.</p>
+        </div>
+        <div class="search-row">
+          <input id="courseSearch" type="search" placeholder="Search courses by name or instructor..." />
+        </div>
+        <div class="course-actions">
+          <input id="newCourseName" type="text" placeholder="Course name" />
+          <input id="newCourseInstructor" type="text" placeholder="Instructor name" />
+          <input id="newCourseSemester" type="text" placeholder="Semester" />
+          <select id="newCourseStatus">
+            <option value="Open">Open</option>
+            <option value="Full">Full</option>
+            <option value="Closed">Closed</option>
+          </select>
+          <button id="addCourseButton" class="btn btn-primary">Add Course</button>
+        </div>
+        <div class="table-wrap">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Course</th>
+                <th>Instructor</th>
+                <th>Semester</th>
+                  <th>Status</th>
+                  <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Web Design & UX</td>
+                <td>Prof. Ayesha Khan</td>
+                <td>Fall 2026</td>
+                  <td>Open</td>
+                  <td><button class="btn btn-secondary course-action-btn">Register</button></td>
+              </tr>
+              <tr>
+                <td>Data Science Basics</td>
+                <td>Dr. Omar Ali</td>
+                <td>Spring 2027</td>
+                  <td>Open</td>
+                  <td><button class="btn btn-secondary course-action-btn">Register</button></td>
+              </tr>
+              <tr>
+                <td>Cloud Computing</td>
+                <td>Ms. Sana Iqbal</td>
+                <td>Fall 2026</td>
+                  <td>Full</td>
+                  <td><button class="btn btn-secondary course-action-btn">Register</button></td>
+              </tr>
+              <tr>
+                <td>Project Management</td>
+                <td>Mr. Fahad Shah</td>
+                <td>Summer 2026</td>
+                  <td>Open</td>
+                  <td><button class="btn btn-secondary course-action-btn">Register</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="panel" id="attendance">
+        <div class="panel-header">
+          <h2>Attendance Management</h2>
+          <p>Record daily attendance, view present/absent summaries, and monitor class participation.</p>
+        </div>
+        <div class="attendance-grid">
+          <article class="attendance-card">
+            <h4>Today's Classes</h4>
+            <p>Computer Networks - 90%</p>
+          </article>
+          <article class="attendance-card">
+            <h4>Absent Students</h4>
+            <p>12 names pending follow-up</p>
+          </article>
+          <article class="attendance-card">
+            <h4>Weekly Average</h4>
+            <p>94.7%</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="panel" id="assignments">
+        <div class="panel-header">
+          <h2>Assignment Upload & Submission</h2>
+          <p>Teachers upload, students submit, and the system tracks file uploads and deadlines.</p>
+        </div>
+        <div class="assignment-grid">
+          <div class="assignment-card">
+            <h4>Upload Assignment</h4>
+            <p>Title: Final Project Brief</p>
+            <input id="teacherUpload" type="file" accept=".pdf,.docx" />
+            <button id="uploadAssignmentBtn" class="btn btn-secondary">Upload File</button>
+            <p id="uploadStatus" class="small-text">No file selected.</p>
+          </div>
+          <div class="assignment-card">
+            <h4>Submit Your Work</h4>
+            <p>Upload slides, report, or source files before the deadline.</p>
+            <input id="studentSubmit" type="file" accept=".pdf,.docx,.zip" />
+            <button id="submitAssignmentBtn" class="btn btn-secondary">Submit Now</button>
+            <p id="submitStatus" class="small-text">No submission yet.</p>
+          </div>
+          <div class="assignment-card">
+            <h4>Recent Submissions</h4>
+            <p>86% submitted on time, 14% pending review.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel" id="results">
+        <div class="panel-header">
+          <h2>Marks & Result Management</h2>
+          <p>Review marks, calculate GPAs, and download student report cards as PDF.</p>
+        </div>
+        <div class="results-grid">
+          <article class="result-card">
+            <h4>Final Grade</h4>
+            <p>CGPA 3.78</p>
+          </article>
+          <article class="result-card">
+            <h4>Latest Exam</h4>
+            <p>Grade A- in Data Analytics</p>
+          </article>
+          <article class="result-card">
+            <h4>Report Card</h4>
+            <button id="downloadPdfButton" class="btn btn-primary">Download PDF</button>
+          </article>
+        </div>
+      </section>
+
+      <section class="panel" id="notice">
+        <div class="panel-header">
+          <h2>Notice Board</h2>
+          <p>Publish announcements, campus updates, exam schedules, and event alerts.</p>
+        </div>
+        <div class="notice-list">
+          <article class="notice-item">
+            <span class="notice-date">Jul 01, 2026</span>
+            <h4>Summer Semester Registration Open</h4>
+            <p>Students may now register for summer electives through the portal.</p>
+          </article>
+          <article class="notice-item">
+            <span class="notice-date">Jun 28, 2026</span>
+            <h4>Campus Wi-Fi Upgrade</h4>
+            <p>Network maintenance scheduled for Saturday from 2 PM to 5 PM.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="panel" id="chat">
+        <div class="panel-header">
+          <h2>Chat & Messaging</h2>
+          <p>Message teachers, students, or administrators directly from the dashboard.</p>
+        </div>
+        <div class="chat-shell">
+          <div class="chat-window">
+            <div class="message received">
+              <p><strong>Admin:</strong> Welcome to the new semester. Check your timetable and stay on track.</p>
+            </div>
+            <div class="message sent">
+              <p><strong>Student:</strong> Thank you! I have submitted my assignment.</p>
+            </div>
+            <div class="message received">
+              <p><strong>Teacher:</strong> Great work. Keep an eye on the attendance updates.</p>
+            </div>
+          </div>
+          <div class="chat-input">
+            <input type="text" placeholder="Type a message..." />
+            <button class="btn btn-primary">Send</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>Smart University Management System • Responsive UI • Dark mode ready • Built for modern campuses.</p>
+    </footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
